@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <!-- Power bank body -->
+  <rect x="130" y="120" width="140" height="160" rx="20" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="140" y="130" width="120" height="140" rx="16" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- Battery indicator bars -->
+  <rect x="160" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
+  <rect x="178" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
+  <rect x="196" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
+  <rect x="214" y="145" width="12" height="18" rx="3" fill="#F97316"/>
+  <rect x="232" y="145" width="12" height="10" rx="3" fill="#EF4444"/>
+  <!-- Percentage text -->
+  <text x="200" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#334155" font-weight="bold">10000</text>
+  <text x="200" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">mAh</text>
+  <!-- USB Ports -->
+  <rect x="155" y="235" width="30" height="12" rx="3" fill="#334155"/>
+  <rect x="215" y="235" width="30" height="12" rx="3" fill="#334155"/>
+  <text x="170" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-A</text>
+  <text x="230" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-C</text>
+  <!-- Power button -->
+  <circle cx="200" cy="265" r="8" fill="#334155"/>
+  <path d="M197 262 L200 258 L203 262" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Lightning bolt icon -->
+  <path d="M198 218 L192 232 L200 232 L196 244" stroke="#F59E0B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Portable Phone Charger</text>
+</svg>

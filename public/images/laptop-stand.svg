@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <!-- Stand base -->
+  <rect x="100" y="260" width="200" height="12" rx="6" fill="#94A3B8" stroke="#64748B" stroke-width="2"/>
+  <!-- Stand legs -->
+  <path d="M140 260 L180 160" stroke="#64748B" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M260 260 L220 160" stroke="#64748B" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Support arms -->
+  <path d="M180 160 L220 160" stroke="#64748B" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M180 160 L175 150" stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M220 160 L225 150" stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Laptop on stand -->
+  <rect x="120" y="95" width="160" height="10" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <!-- Screen -->
+  <rect x="115" y="10" width="170" height="85" rx="8" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
+  <rect x="122" y="17" width="156" height="70" rx="4" fill="#1E3A5F"/>
+  <!-- Screen content -->
+  <rect x="132" y="27" width="60" height="4" rx="2" fill="#334155" opacity="0.5"/>
+  <rect x="132" y="37" width="40" height="4" rx="2" fill="#334155" opacity="0.5"/>
+  <rect x="132" y="47" width="50" height="4" rx="2" fill="#334155" opacity="0.5"/>
+  <rect x="132" y="57" width="70" height="4" rx="2" fill="#334155" opacity="0.5"/>
+  <rect x="132" y="67" width="35" height="4" rx="2" fill="#334155" opacity="0.5"/>
+  <!-- Webcam -->
+  <circle cx="200" cy="8" r="2" fill="#CBD5E1"/>
+  <!-- Ventilation slots on stand -->
+  <rect x="165" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="175" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="185" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="195" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="205" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="215" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="225" y="170" width="4" height="20" rx="2" fill="#CBD5E1" opacity="0.6"/>
+  <!-- Anti-slip pads -->
+  <ellipse cx="145" cy="265" rx="10" ry="4" fill="#1E293B"/>
+  <ellipse cx="255" cy="265" rx="10" ry="4" fill="#1E293B"/>
+  <!-- Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Ergonomic Laptop Stand</text>
+</svg>

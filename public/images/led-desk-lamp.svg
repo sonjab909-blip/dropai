@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <!-- Base -->
+  <ellipse cx="200" cy="290" rx="70" ry="16" fill="#475569" stroke="#334155" stroke-width="2"/>
+  <ellipse cx="200" cy="286" rx="65" ry="12" fill="#64748B"/>
+  <!-- Wireless charging pad indicator -->
+  <ellipse cx="200" cy="286" rx="35" ry="6" fill="#1E293B" opacity="0.3"/>
+  <path d="M200 282 L205 288 L195 288 Z" fill="#22C55E" opacity="0.6"/>
+  <!-- Arm -->
+  <line x1="200" y1="285" x2="180" y2="130" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+  <line x1="200" y1="285" x2="180" y2="130" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <!-- Joint 1 -->
+  <circle cx="200" cy="285" r="8" fill="#475569" stroke="#334155" stroke-width="2"/>
+  <circle cx="200" cy="285" r="3" fill="#334155"/>
+  <!-- Head arm -->
+  <line x1="180" y1="130" x2="160" y2="100" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
+  <line x1="180" y1="130" x2="160" y2="100" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Joint 2 -->
+  <circle cx="180" cy="130" r="6" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="180" cy="130" r="2" fill="#334155"/>
+  <!-- Lamp head -->
+  <path d="M120 110 L160 100 L155 85 L115 95 Z" fill="#475569" stroke="#334155" stroke-width="2"/>
+  <path d="M115 95 L155 85 L150 75 L110 85 Z" fill="#64748B"/>
+  <!-- Light glow -->
+  <path d="M110 85 L150 75 L140 50 L100 60 Z" fill="#FEF08A" opacity="0.4"/>
+  <path d="M115 80 L145 72 L135 52 L105 60 Z" fill="#FEF08A" opacity="0.3"/>
+  <!-- Light rays -->
+  <line x1="125" y1="60" x2="115" y2="30" stroke="#FEF08A" stroke-width="1.5" opacity="0.5"/>
+  <line x1="135" y1="58" x2="135" y2="28" stroke="#FEF08A" stroke-width="1.5" opacity="0.5"/>
+  <line x1="145" y1="60" x2="155" y2="30" stroke="#FEF08A" stroke-width="1.5" opacity="0.5"/>
+  <!-- Touch controls on base -->
+  <circle cx="162" cy="286" r="6" fill="#334155"/>
+  <circle cx="162" cy="286" r="3" fill="#F59E0B"/>
+  <circle cx="238" cy="286" r="6" fill="#334155"/>
+  <circle cx="238" cy="286" r="3" fill="#3B82F6"/>
+  <!-- Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Smart LED Desk Lamp</text>
+</svg>

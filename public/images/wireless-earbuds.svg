@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <!-- Charging case (bottom) -->
+  <rect x="130" y="220" width="140" height="80" rx="16" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="145" y="235" width="110" height="50" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- LED indicator -->
+  <circle cx="200" cy="245" r="5" fill="#22C55E"/>
+  <!-- Left earbud -->
+  <ellipse cx="160" cy="140" rx="35" ry="50" fill="#475569" stroke="#334155" stroke-width="2" transform="rotate(-15, 160, 140)"/>
+  <ellipse cx="160" cy="120" rx="28" ry="40" fill="#64748B" stroke="#475569" stroke-width="1.5" transform="rotate(-15, 160, 140)"/>
+  <circle cx="155" cy="100" r="8" fill="#94A3B8" opacity="0.5" transform="rotate(-15, 160, 140)"/>
+  <!-- Right earbud -->
+  <ellipse cx="240" cy="140" rx="35" ry="50" fill="#475569" stroke="#334155" stroke-width="2" transform="rotate(15, 240, 140)"/>
+  <ellipse cx="240" cy="120" rx="28" ry="40" fill="#64748B" stroke="#475569" stroke-width="1.5" transform="rotate(15, 240, 140)"/>
+  <circle cx="245" cy="100" r="8" fill="#94A3B8" opacity="0.5" transform="rotate(15, 240, 140)"/>
+  <!-- Ear tips -->
+  <ellipse cx="160" cy="170" rx="16" ry="10" fill="#334155" transform="rotate(-15, 160, 170)"/>
+  <ellipse cx="240" cy="170" rx="16" ry="10" fill="#334155" transform="rotate(15, 240, 170)"/>
+  <!-- Charging pins -->
+  <rect x="193" y="312" width="6" height="4" rx="1" fill="#CBD5E1"/>
+  <rect x="201" y="312" width="6" height="4" rx="1" fill="#CBD5E1"/>
+  <!-- Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Wireless Bluetooth Earbuds</text>
+</svg>

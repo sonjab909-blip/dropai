@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <!-- Band 1 (light/least resistance) - yellow -->
+  <ellipse cx="200" cy="115" rx="100" ry="15" fill="none" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="200" cy="115" rx="100" ry="15" fill="none" stroke="#FACC15" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 8" opacity="0.3"/>
+  <!-- Band 2 - green -->
+  <ellipse cx="200" cy="145" rx="95" ry="15" fill="none" stroke="#22C55E" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="200" cy="145" rx="95" ry="15" fill="none" stroke="#22C55E" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 8" opacity="0.3"/>
+  <!-- Band 3 - blue -->
+  <ellipse cx="200" cy="175" rx="90" ry="15" fill="none" stroke="#3B82F6" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="200" cy="175" rx="90" ry="15" fill="none" stroke="#3B82F6" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 8" opacity="0.3"/>
+  <!-- Band 4 - red -->
+  <ellipse cx="200" cy="205" rx="85" ry="15" fill="none" stroke="#EF4444" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="200" cy="205" rx="85" ry="15" fill="none" stroke="#EF4444" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 8" opacity="0.3"/>
+  <!-- Band 5 - black (heaviest) -->
+  <ellipse cx="200" cy="235" rx="80" ry="15" fill="none" stroke="#1E293B" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="200" cy="235" rx="80" ry="15" fill="none" stroke="#1E293B" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 8" opacity="0.3"/>
+  <!-- Resistance labels -->
+  <text x="100" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#334155">10lb</text>
+  <text x="100" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#334155">20lb</text>
+  <text x="100" y="178" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#334155">30lb</text>
+  <text x="100" y="208" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#334155">40lb</text>
+  <text x="100" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#334155">50lb</text>
+  <!-- Carrying bag -->
+  <rect x="150" y="265" width="100" height="40" rx="8" fill="#334155" stroke="#1E293B" stroke-width="2"/>
+  <rect x="155" y="270" width="90" height="30" rx="5" fill="#475569"/>
+  <text x="200" y="289" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94A3B8" font-weight="500">BANDS</text>
+  <!-- Bag handles -->
+  <path d="M170 265 Q170 250 180 248 Q190 250 190 265" stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M210 265 Q210 250 220 248 Q230 250 230 265" stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Fitness Resistance Bands Set</text>
+</svg>
