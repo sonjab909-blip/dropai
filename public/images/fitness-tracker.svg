@@ -1,30 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
-  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="bandGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="50%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="buckleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="heartGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="16" fill="url(#bg)"/>
+  <!-- Shadow under watch -->
+  <ellipse cx="200" cy="340" rx="70" ry="12" fill="#0F172A" opacity="0.1"/>
   <!-- Watch band top -->
-  <rect x="170" y="60" width="60" height="80" rx="12" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
-  <rect x="175" y="65" width="50" height="70" rx="10" fill="#334155"/>
-  <!-- Watch face -->
-  <rect x="155" y="130" width="90" height="120" rx="20" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
-  <rect x="162" y="137" width="76" height="106" rx="16" fill="#0F172A"/>
-  <!-- Display screen -->
-  <rect x="168" y="143" width="64" height="94" rx="12" fill="#1E3A5F"/>
-  <!-- Time display -->
-  <text x="200" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#E2E8F0" font-weight="bold">10:30</text>
-  <!-- Heart icon -->
-  <path d="M185 195 L200 208 L215 195" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="200" cy="208" r="3" fill="#EF4444"/>
-  <!-- Steps -->
-  <text x="200" y="228" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94A3B8">8,420 steps</text>
+  <g filter="url(#shadow)">
+    <rect x="168" y="60" width="64" height="80" rx="14" fill="url(#bandGrad)"/>
+    <rect x="173" y="65" width="54" height="70" rx="10" fill="#334155" opacity="0.5"/>
+    <!-- Band texture lines -->
+    <line x1="178" y1="75" x2="222" y2="75" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+    <line x1="178" y1="85" x2="222" y2="85" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+    <line x1="178" y1="95" x2="222" y2="95" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+    <line x1="178" y1="105" x2="222" y2="105" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+    <line x1="178" y1="115" x2="222" y2="115" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+    <line x1="178" y1="125" x2="222" y2="125" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+  </g>
+  <!-- Watch body -->
+  <g filter="url(#shadow)">
+    <rect x="152" y="135" width="96" height="124" rx="24" fill="url(#bodyGrad)"/>
+    <!-- Bezel highlight -->
+    <rect x="155" y="138" width="90" height="118" rx="22" fill="none" stroke="#64748B" stroke-width="1" opacity="0.3"/>
+    <!-- Inner bezel -->
+    <rect x="160" y="143" width="80" height="108" rx="18" fill="#0F172A"/>
+    <!-- Screen -->
+    <rect x="166" y="149" width="68" height="96" rx="14" fill="url(#screenGrad)"/>
+    <!-- Screen highlight -->
+    <rect x="166" y="149" width="68" height="96" rx="14" fill="url(#screenGlow)"/>
+    <!-- Time display -->
+    <text x="200" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#FFFFFF" font-weight="bold" letter-spacing="1">10:30</text>
+    <!-- Heart icon -->
+    <path d="M185 200 L200 214 L215 200" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#heartGlow)"/>
+    <circle cx="200" cy="214" r="3" fill="#EF4444" filter="url(#heartGlow)"/>
+    <!-- Heart rate -->
+    <text x="200" y="228" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#E2E8F0" opacity="0.8">72 bpm</text>
+    <!-- Steps at bottom -->
+    <text x="200" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">8,420 steps</text>
+  </g>
   <!-- Watch band bottom -->
-  <rect x="170" y="250" width="60" height="80" rx="12" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
-  <rect x="175" y="255" width="50" height="70" rx="10" fill="#334155"/>
-  <!-- Buckle holes -->
-  <circle cx="185" cy="280" r="3" fill="#475569"/>
-  <circle cx="185" cy="295" r="3" fill="#475569"/>
-  <circle cx="185" cy="310" r="3" fill="#475569"/>
-  <!-- Buckle -->
-  <rect x="215" y="275" width="14" height="30" rx="4" fill="#94A3B8" stroke="#64748B" stroke-width="1.5"/>
-  <rect x="219" y="283" width="6" height="14" rx="2" fill="#64748B"/>
+  <g filter="url(#shadow)">
+    <rect x="168" y="259" width="64" height="80" rx="14" fill="url(#bandGrad)"/>
+    <rect x="173" y="264" width="54" height="70" rx="10" fill="#334155" opacity="0.5"/>
+    <!-- Buckle holes -->
+    <circle cx="186" cy="285" r="3.5" fill="#0F172A" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="186" cy="300" r="3.5" fill="#0F172A" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="186" cy="315" r="3.5" fill="#0F172A" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="186" cy="330" r="3.5" fill="#0F172A" stroke="#475569" stroke-width="0.5"/>
+    <!-- Buckle -->
+    <rect x="214" y="284" width="16" height="32" rx="5" fill="url(#buckleGrad)" stroke="#64748B" stroke-width="1"/>
+    <rect x="218" y="292" width="8" height="16" rx="3" fill="#64748B"/>
+  </g>
+  <!-- Heart rate sensor on back (side view hint) -->
+  <ellipse cx="200" cy="197" rx="8" ry="8" fill="#1E293B" stroke="#0F172A" stroke-width="1" opacity="0.4"/>
+  <circle cx="200" cy="197" r="3" fill="#22C55E" opacity="0.3" filter="url(#glow)"/>
   <!-- Label -->
-  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Smart Fitness Tracker</text>
+  <text x="200" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#64748B" font-weight="600" letter-spacing="0.5">Smart Fitness Tracker</text>
 </svg>

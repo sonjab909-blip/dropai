@@ -1,24 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
-  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
-  <!-- Charging case (bottom) -->
-  <rect x="130" y="220" width="140" height="80" rx="16" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
-  <rect x="145" y="235" width="110" height="50" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="caseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="budGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="budHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="16" fill="url(#bg)"/>
+  <!-- Shadow under case -->
+  <ellipse cx="200" cy="310" rx="80" ry="12" fill="#0F172A" opacity="0.08"/>
+  <!-- Charging case - bottom -->
+  <rect x="125" y="225" width="150" height="85" rx="20" fill="url(#caseGrad)" stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="135" y="235" width="130" height="60" rx="14" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <!-- Inner case shadow -->
+  <rect x="140" y="240" width="120" height="50" rx="10" fill="#E2E8F0" opacity="0.5"/>
   <!-- LED indicator -->
-  <circle cx="200" cy="245" r="5" fill="#22C55E"/>
-  <!-- Left earbud -->
-  <ellipse cx="160" cy="140" rx="35" ry="50" fill="#475569" stroke="#334155" stroke-width="2" transform="rotate(-15, 160, 140)"/>
-  <ellipse cx="160" cy="120" rx="28" ry="40" fill="#64748B" stroke="#475569" stroke-width="1.5" transform="rotate(-15, 160, 140)"/>
-  <circle cx="155" cy="100" r="8" fill="#94A3B8" opacity="0.5" transform="rotate(-15, 160, 140)"/>
-  <!-- Right earbud -->
-  <ellipse cx="240" cy="140" rx="35" ry="50" fill="#475569" stroke="#334155" stroke-width="2" transform="rotate(15, 240, 140)"/>
-  <ellipse cx="240" cy="120" rx="28" ry="40" fill="#64748B" stroke="#475569" stroke-width="1.5" transform="rotate(15, 240, 140)"/>
-  <circle cx="245" cy="100" r="8" fill="#94A3B8" opacity="0.5" transform="rotate(15, 240, 140)"/>
-  <!-- Ear tips -->
-  <ellipse cx="160" cy="170" rx="16" ry="10" fill="#334155" transform="rotate(-15, 160, 170)"/>
-  <ellipse cx="240" cy="170" rx="16" ry="10" fill="#334155" transform="rotate(15, 240, 170)"/>
+  <circle cx="200" cy="248" r="4" fill="#22C55E" filter="url(#glow)"/>
+  <circle cx="200" cy="248" r="2" fill="#86EFAC"/>
   <!-- Charging pins -->
-  <rect x="193" y="312" width="6" height="4" rx="1" fill="#CBD5E1"/>
-  <rect x="201" y="312" width="6" height="4" rx="1" fill="#CBD5E1"/>
+  <rect x="192" y="320" width="8" height="5" rx="2" fill="#CBD5E1"/>
+  <rect x="200" y="320" width="8" height="5" rx="2" fill="#CBD5E1"/>
+  <!-- Shadow under left earbud -->
+  <ellipse cx="150" cy="195" rx="30" ry="10" fill="#0F172A" opacity="0.1"/>
+  <!-- Left earbud -->
+  <g transform="rotate(-12, 155, 140)" filter="url(#shadow)">
+    <ellipse cx="155" cy="140" rx="32" ry="52" fill="url(#budGrad)"/>
+    <ellipse cx="155" cy="130" rx="26" ry="42" fill="url(#budHighlight)"/>
+    <ellipse cx="155" cy="120" rx="22" ry="35" fill="#475569" opacity="0.3"/>
+    <circle cx="150" cy="105" r="6" fill="#94A3B8" opacity="0.4"/>
+    <!-- Ear tip -->
+    <ellipse cx="155" cy="178" rx="14" ry="8" fill="#1E293B"/>
+    <ellipse cx="155" cy="178" rx="10" ry="5" fill="#334155"/>
+  </g>
+  <!-- Shadow under right earbud -->
+  <ellipse cx="250" cy="195" rx="30" ry="10" fill="#0F172A" opacity="0.1"/>
+  <!-- Right earbud -->
+  <g transform="rotate(12, 245, 140)" filter="url(#shadow)">
+    <ellipse cx="245" cy="140" rx="32" ry="52" fill="url(#budGrad)"/>
+    <ellipse cx="245" cy="130" rx="26" ry="42" fill="url(#budHighlight)"/>
+    <ellipse cx="245" cy="120" rx="22" ry="35" fill="#475569" opacity="0.3"/>
+    <circle cx="250" cy="105" r="6" fill="#94A3B8" opacity="0.4"/>
+    <ellipse cx="245" cy="178" rx="14" ry="8" fill="#1E293B"/>
+    <ellipse cx="245" cy="178" rx="10" ry="5" fill="#334155"/>
+  </g>
   <!-- Label -->
-  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Wireless Bluetooth Earbuds</text>
+  <text x="200" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#64748B" font-weight="600" letter-spacing="0.5">Wireless Bluetooth Earbuds</text>
 </svg>

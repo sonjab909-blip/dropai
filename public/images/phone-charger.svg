@@ -1,27 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
-  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="bodySideGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="endGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="highlightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="portGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ledGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="16" fill="url(#bg)"/>
+  <!-- Shadow under power bank -->
+  <ellipse cx="200" cy="320" rx="100" ry="14" fill="#0F172A" opacity="0.1"/>
   <!-- Power bank body -->
-  <rect x="130" y="120" width="140" height="160" rx="20" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
-  <rect x="140" y="130" width="120" height="140" rx="16" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
-  <!-- Battery indicator bars -->
-  <rect x="160" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
-  <rect x="178" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
-  <rect x="196" y="145" width="12" height="30" rx="3" fill="#22C55E"/>
-  <rect x="214" y="145" width="12" height="18" rx="3" fill="#F97316"/>
-  <rect x="232" y="145" width="12" height="10" rx="3" fill="#EF4444"/>
-  <!-- Percentage text -->
-  <text x="200" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#334155" font-weight="bold">10000</text>
-  <text x="200" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">mAh</text>
-  <!-- USB Ports -->
-  <rect x="155" y="235" width="30" height="12" rx="3" fill="#334155"/>
-  <rect x="215" y="235" width="30" height="12" rx="3" fill="#334155"/>
-  <text x="170" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-A</text>
-  <text x="230" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-C</text>
-  <!-- Power button -->
-  <circle cx="200" cy="265" r="8" fill="#334155"/>
-  <path d="M197 262 L200 258 L203 262" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Lightning bolt icon -->
-  <path d="M198 218 L192 232 L200 232 L196 244" stroke="#F59E0B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <!-- Main body -->
+    <rect x="90" y="140" width="220" height="140" rx="20" fill="url(#bodyGrad)" stroke="#CBD5E1" stroke-width="1.5"/>
+    <!-- Top highlight -->
+    <rect x="90" y="140" width="220" height="70" rx="20" fill="url(#highlightGrad)"/>
+    <!-- Bottom edge shadow -->
+    <rect x="90" y="240" width="220" height="40" rx="0" fill="#E2E8F0" opacity="0.5"/>
+    <rect x="90" y="260" width="220" height="20" rx="0" fill="#CBD5E1" opacity="0.4"/>
+    <!-- Side edge 3D effect -->
+    <rect x="88" y="144" width="4" height="132" rx="2" fill="url(#bodySideGrad)"/>
+    <!-- USB Ports label -->
+    <text x="200" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94A3B8" font-weight="500" letter-spacing="2">POWER BANK</text>
+    <!-- USB-A Port (left) -->
+    <rect x="145" y="180" width="24" height="12" rx="2" fill="url(#portGrad)"/>
+    <rect x="148" y="183" width="18" height="6" rx="1" fill="#0F172A"/>
+    <rect x="150" y="184" width="14" height="4" rx="1" fill="#1E293B"/>
+    <!-- USB-C Port (right) -->
+    <rect x="225" y="182" width="16" height="8" rx="2" fill="url(#portGrad)"/>
+    <rect x="228" y="184" width="10" height="4" rx="1" fill="#0F172A"/>
+    <!-- Port labels -->
+    <text x="157" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-A</text>
+    <text x="233" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94A3B8">USB-C</text>
+    <!-- LED battery indicator -->
+    <rect x="155" y="215" width="90" height="14" rx="7" fill="#1E293B"/>
+    <!-- LED segments -->
+    <rect x="158" y="218" width="16" height="8" rx="4" fill="#22C55E" filter="url(#ledGlow)"/>
+    <rect x="178" y="218" width="16" height="8" rx="4" fill="#22C55E" filter="url(#ledGlow)"/>
+    <rect x="198" y="218" width="16" height="8" rx="4" fill="#22C55E" filter="url(#ledGlow)"/>
+    <rect x="218" y="218" width="16" height="8" rx="4" fill="#86EFAC" opacity="0.4"/>
+    <!-- Battery percentage -->
+    <text x="200" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#22C55E" font-weight="600">75%</text>
+    <!-- Power button -->
+    <rect x="185" y="252" width="30" height="8" rx="4" fill="#64748B"/>
+    <rect x="188" y="254" width="24" height="4" rx="2" fill="#94A3B8"/>
+    <!-- Bottom edge (thickness) -->
+    <rect x="95" y="278" width="210" height="8" rx="4" fill="#CBD5E1" opacity="0.6"/>
+  </g>
   <!-- Label -->
-  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Portable Phone Charger</text>
+  <text x="200" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#64748B" font-weight="600" letter-spacing="0.5">Portable Phone Charger</text>
 </svg>

@@ -1,34 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
-  <rect width="400" height="400" rx="12" fill="#F8FAFC"/>
-  <!-- Speaker body -->
-  <rect x="110" y="80" width="180" height="220" rx="30" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
-  <rect x="120" y="90" width="160" height="200" rx="25" fill="#334155"/>
-  <!-- Top accent -->
-  <rect x="130" y="95" width="140" height="6" rx="3" fill="#475569"/>
-  <!-- Speaker grille - main (top) -->
-  <circle cx="200" cy="155" r="45" fill="#1E293B" stroke="#0F172A" stroke-width="1.5"/>
-  <circle cx="200" cy="155" r="35" fill="#1E293B"/>
-  <circle cx="200" cy="155" r="25" fill="#0F172A" opacity="0.5"/>
-  <circle cx="200" cy="155" r="15" fill="#1E293B"/>
-  <circle cx="200" cy="155" r="5" fill="#475569"/>
-  <!-- Speaker grille - bottom (passive radiator) -->
-  <ellipse cx="200" cy="240" rx="35" ry="20" fill="#1E293B" stroke="#0F172A" stroke-width="1.5"/>
-  <ellipse cx="200" cy="240" rx="28" ry="15" fill="#0F172A" opacity="0.4"/>
-  <!-- Control buttons -->
-  <circle cx="160" cy="270" r="6" fill="#475569"/>
-  <path d="M158 268 L158 272" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="200" cy="270" r="6" fill="#475569"/>
-  <polygon points="199,267 203,270 199,273" fill="#94A3B8"/>
-  <circle cx="240" cy="270" r="6" fill="#475569"/>
-  <path d="M240 267 L244 270 L240 273" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- LED indicator -->
-  <circle cx="200" cy="286" r="3" fill="#22C55E"/>
-  <!-- Carabiner clip -->
-  <path d="M200 80 Q200 60 210 55 Q220 50 220 65 Q220 78 210 80" stroke="#94A3B8" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <line x1="210" y1="55" x2="210" y2="65" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
-  <!-- IPX7 badge -->
-  <rect x="250" y="95" width="32" height="16" rx="4" fill="#3B82F6" opacity="0.8"/>
-  <text x="266" y="107" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="white" font-weight="bold">IPX7</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="bodyHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="grilleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="topGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="16" fill="url(#bg)"/>
+  <!-- Shadow under speaker -->
+  <ellipse cx="200" cy="340" rx="90" ry="14" fill="#0F172A" opacity="0.12"/>
+  <!-- Main body -->
+  <g filter="url(#shadow)">
+    <!-- Body - cylindrical-ish shape -->
+    <rect x="110" y="120" width="180" height="200" rx="24" fill="url(#bodyGrad)"/>
+    <!-- Body highlight -->
+    <rect x="110" y="120" width="180" height="100" rx="24" fill="url(#bodyHighlight)"/>
+    <!-- Left edge highlight -->
+    <rect x="112" y="124" width="6" height="192" rx="3" fill="#475569" opacity="0.3"/>
+    <!-- Rubberized texture (subtle lines) -->
+    <line x1="115" y1="145" x2="285" y2="145" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="155" x2="285" y2="155" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="165" x2="285" y2="165" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="175" x2="285" y2="175" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="255" x2="285" y2="255" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="265" x2="285" y2="265" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="275" x2="285" y2="275" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <line x1="115" y1="285" x2="285" y2="285" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    <!-- Speaker grille (mesh area) -->
+    <rect x="125" y="180" width="150" height="80" rx="10" fill="url(#grilleGrad)"/>
+    <rect x="125" y="180" width="150" height="80" rx="10" fill="none" stroke="#1E293B" stroke-width="1"/>
+    <!-- Grille dots pattern -->
+    <circle cx="140" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="155" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="170" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="185" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="200" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="215" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="230" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="245" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="260" cy="195" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="140" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="155" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="170" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="185" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="200" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="215" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="230" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="245" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="260" cy="210" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="140" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="155" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="170" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="185" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="200" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="215" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="230" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="245" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="260" cy="225" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="140" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="155" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="170" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="185" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="200" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="215" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="230" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="245" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <circle cx="260" cy="240" r="2" fill="#0F172A" opacity="0.6"/>
+    <!-- Orange accent stripe -->
+    <rect x="110" y="268" width="180" height="6" fill="url(#accentGrad)"/>
+    <!-- Brand logo area -->
+    <rect x="170" y="285" width="60" height="20" rx="4" fill="#1E293B"/>
+    <text x="200" y="299" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748B" font-weight="700" letter-spacing="1.5">DROP-AI</text>
+    <!-- Top panel -->
+    <rect x="115" y="120" width="170" height="20" rx="10" fill="url(#topGrad)"/>
+    <!-- Buttons on top -->
+    <circle cx="155" cy="130" r="5" fill="#64748B"/>
+    <circle cx="155" cy="130" r="3" fill="#94A3B8" opacity="0.5"/>
+    <circle cx="200" cy="130" r="5" fill="#64748B"/>
+    <circle cx="200" cy="130" r="3" fill="#94A3B8" opacity="0.5"/>
+    <circle cx="245" cy="130" r="5" fill="#64748B"/>
+    <circle cx="245" cy="130" r="3" fill="#94A3B8" opacity="0.5"/>
+    <!-- Power indicator LED -->
+    <circle cx="200" cy="130" r="1.5" fill="#22C55E" filter="url(#glow)"/>
+  </g>
   <!-- Label -->
-  <text x="200" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" font-weight="500">Waterproof Bluetooth Speaker</text>
+  <text x="200" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#64748B" font-weight="600" letter-spacing="0.5">Waterproof Bluetooth Speaker</text>
 </svg>
