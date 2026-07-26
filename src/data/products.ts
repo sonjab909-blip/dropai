@@ -30,7 +30,7 @@ export const products: Product[] = [
     rating: 4.5,
     description:
       "Premium wireless earbuds with noise cancellation, 24hr battery life, and crystal-clear audio. Perfect for music lovers and professionals on the go.",
-    image: "/images/wireless-earbuds.svg",
+    image: "/images/wireless-earbuds.png",
     supplier: "AliExpress (TWS i12)",
     cost: 12.5,
     inStock: true,
@@ -51,7 +51,7 @@ export const products: Product[] = [
     rating: 4.7,
     description:
       "Track your health 24/7 with heart rate monitoring, sleep analysis, step counting, and smart notifications. Water-resistant with 14-day battery.",
-    image: "/images/fitness-tracker.svg",
+    image: "/images/fitness-tracker.png",
     supplier: "AliExpress (ID115)",
     cost: 18.0,
     inStock: true,
@@ -72,7 +72,7 @@ export const products: Product[] = [
     rating: 4.3,
     description:
       "Ultra-compact 10000mAh portable charger with fast charging, dual USB ports, and LED battery indicator. Fits in any pocket.",
-    image: "/images/phone-charger.svg",
+    image: "/images/phone-charger.png",
     supplier: "AliExpress (10000mAh power bank)",
     cost: 8.5,
     inStock: true,
@@ -93,7 +93,7 @@ export const products: Product[] = [
     rating: 4.6,
     description:
       "Adjustable aluminum laptop stand with ventilated design to prevent overheating. Elevates your screen to eye level for comfortable ergonomic work.",
-    image: "/images/laptop-stand.svg",
+    image: "/images/laptop-stand.png",
     supplier: "AliExpress (aluminum foldable)",
     cost: 14.0,
     inStock: true,
@@ -114,7 +114,7 @@ export const products: Product[] = [
     rating: 4.4,
     description:
       "Extra-thick 6mm eco-friendly yoga mat with alignment lines. Non-slip surface, moisture resistant, includes carrying strap.",
-    image: "/images/yoga-mat.svg",
+    image: "/images/yoga-mat.png",
     supplier: "AliExpress (TPE non-slip)",
     cost: 12.0,
     inStock: true,
@@ -135,7 +135,7 @@ export const products: Product[] = [
     rating: 4.5,
     description:
       "Eye-caring LED desk lamp with wireless charging, touch control, 5 color modes, and 7 brightness levels. USB-powered with memory function.",
-    image: "/images/led-desk-lamp.svg",
+    image: "/images/led-desk-lamp.png",
     supplier: "AliExpress (touch control)",
     cost: 18.5,
     inStock: true,
@@ -156,7 +156,7 @@ export const products: Product[] = [
     rating: 4.2,
     description:
       "IPX7 waterproof portable speaker with rich 360° sound, 20hr playtime, built-in microphone, and speakerphone function.",
-    image: "/images/bluetooth-speaker.svg",
+    image: "/images/bluetooth-speaker.png",
     supplier: "AliExpress (IPX7 portable)",
     cost: 14.0,
     inStock: true,
@@ -177,7 +177,7 @@ export const products: Product[] = [
     rating: 4.8,
     description:
       "Set of 5 resistance bands with different tension levels, door anchor, ankle straps, and carrying bag. Perfect for home workouts.",
-    image: "/images/resistance-bands.svg",
+    image: "/images/resistance-bands.png",
     supplier: "AliExpress (5-level set)",
     cost: 6.5,
     inStock: true,
